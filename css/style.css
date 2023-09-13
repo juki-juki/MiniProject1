@@ -35,7 +35,6 @@
 }
 
 /* Portfolio Hover Effect */
-/* Portfolio Hover Effect */
 .portfolio-item {
     position: relative;
     overflow: hidden;
@@ -84,9 +83,10 @@
     animation: bounce 2s ease infinite;
 }
 
-/* Ensure images maintain aspect ratio and cover parent container */
+
 .img-equal-size {
     height: 100%;
     object-fit: cover;
 }
 
+/* Penge po ng tulog */

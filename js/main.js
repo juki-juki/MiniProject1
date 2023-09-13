@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Handle the "No" button click
   document.querySelector("#ageVerificationModal button[data-bs-dismiss='modal']").addEventListener("click", function() {
-    // Close the current tab (window) when the user clicks "No"
-    window.close();
+    // Redirect to another website when the user clicks "No"
+    window.location.href = "https://youtu.be/oHg5SJYRHA0"; // Replace with the desired URL
   });
 });

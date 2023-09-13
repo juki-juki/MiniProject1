@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'San Francisco';
+    src: local('San Francisco'), local('SanFrancisco'), format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  body {
+    font-family: 'San Francisco', Arial, sans-serif;
+  }
+
+/* Center content vertically and horizontally */
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Responsive image and video styling */
+.section-image,
+.section-video {
+    max-height: 50vh;
+    max-width: 100%;
+    width: auto;
+    object-fit: cover;
+}
+
+.section-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Portfolio Hover Effect */
+/* Portfolio Hover Effect */
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-hover-content {
+    display: none;
+    text-align: center;
+}
+
+.portfolio-item:hover .portfolio-hover {
+    opacity: 1;
+}
+
+.portfolio-item:hover .portfolio-hover-content {
+    display: block;
+}
+
+/* Bounce animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40%, 60% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Apply animation */
+.animated-text {
+    animation: bounce 2s ease infinite;
+}
+
+/* Ensure images maintain aspect ratio and cover parent container */
+.img-equal-size {
+    height: 100%;
+    object-fit: cover;
+}
+

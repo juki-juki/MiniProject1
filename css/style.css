@@ -7,6 +7,11 @@
   body {
     font-family: 'San Francisco', Arial, sans-serif;
   }
+  .text-outline {
+    -webkit-text-stroke: 1px rgb(48, 48, 48); /* Width and color of the text outline */
+    /* Width and color of the text outline */
+    color: rgb(255, 255, 255); /* Text color */
+}
 
 /* Center content vertically and horizontally */
 .center-content {
@@ -87,6 +92,9 @@
 .img-equal-size {
     height: 100%;
     object-fit: cover;
+}
+.larger-font {
+    font-size: 50px; 
 }
 
 /* Penge po ng tulog */

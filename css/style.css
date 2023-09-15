@@ -7,11 +7,6 @@
   body {
     font-family: 'San Francisco', Arial, sans-serif;
   }
-  .text-outline {
-    -webkit-text-stroke: 1px rgb(48, 48, 48); /* Width and color of the text outline */
-    /* Width and color of the text outline */
-    color: rgb(255, 255, 255); /* Text color */
-}
 
 /* Center content vertically and horizontally */
 .center-content {
@@ -74,16 +69,26 @@
 }
 
 /* Bounce animation */
+
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
     }
-    40%, 60% {
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
         transform: translateY(-10px);
     }
 }
 
-/* Apply animation */
+/* Apply the bouncing animation to the button */
+.btn-bounce {
+    animation: bounce 2s infinite;
+}
+
+
+
 .animated-text {
     animation: bounce 2s ease infinite;
 }
@@ -95,6 +100,29 @@
 }
 .larger-font {
     font-size: 50px; 
+}
+
+#chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#cart-offcanvas {
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+
+#cart-offcanvas .offcanvas-header {
+    background-color: white; 
+    border-bottom: none; 
+  
+}
+
+
+#cart-offcanvas .offcanvas-body {
+    background-color: transparent; 
 }
 
 /* Penge po ng tulog */

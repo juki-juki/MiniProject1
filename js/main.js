@@ -61,18 +61,63 @@ chatButton.addEventListener('click', () => {
 sendButton.addEventListener('click', () => {
     const message = messageInput.value;
     if (message.trim() !== '') {
-        // Add the message to the chat messages
+        
         chatMessages.innerHTML += `<div class="user-message">${message}</div>`;
 
-        // Clear the input field
+        
         messageInput.value = '';
 
-        // Simulate a reply (replace with actual chat logic)
+        
         setTimeout(() => {
             chatMessages.innerHTML += `<div class="agent-message">Thanks for your message! Our team will get back to you.</div>`;
         }, 1000);
     }
 });
-
-
-
+document.getElementById('openModalLink1').addEventListener('click', function () {
+  var myModal = new bootstrap.Modal(document.getElementById('productModal1'));
+  myModal.show();
+});
+document.getElementById('openModalLink2').addEventListener('click', function () {
+  var myModal = new bootstrap.Modal(document.getElementById('productModal1'));
+  myModal.show();
+});
+document.getElementById('openModalLink3').addEventListener('click', function () {
+  var myModal = new bootstrap.Modal(document.getElementById('productModal1'));
+  myModal.show();
+});
+document.getElementById('openModalLink4').addEventListener('click', function () {
+  var myModal = new bootstrap.Modal(document.getElementById('productModal1'));
+  myModal.show();
+});
+document.getElementById('openModalLink5').addEventListener('click', function () {
+  var myModal = new bootstrap.Modal(document.getElementById('productModal1'));
+  myModal.show();
+});
+document.getElementById('openModalLink6').addEventListener('click', function () {
+  var myModal = new bootstrap.Modal(document.getElementById('productModal1'));
+  myModal.show();
+});
+document.getElementById('openModalLink7').addEventListener('click', function () {
+  var myModal = new bootstrap.Modal(document.getElementById('productModal1'));
+  myModal.show();
+});
+document.getElementById('openModalLink8').addEventListener('click', function () {
+  var myModal = new bootstrap.Modal(document.getElementById('productModal1'));
+  myModal.show();
+});
+document.getElementById('openModalLink9').addEventListener('click', function () {
+  var myModal = new bootstrap.Modal(document.getElementById('productModal1'));
+  myModal.show();
+});
+document.getElementById('openModalLink10').addEventListener('click', function () {
+  var myModal = new bootstrap.Modal(document.getElementById('productModal1'));
+  myModal.show();
+});
+document.getElementById('openModalLink11').addEventListener('click', function () {
+  var myModal = new bootstrap.Modal(document.getElementById('productModal1'));
+  myModal.show();
+});
+document.getElementById('openModalLink12').addEventListener('click', function () {
+  var myModal = new bootstrap.Modal(document.getElementById('productModal1'));
+  myModal.show();
+});

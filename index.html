@@ -44,23 +44,51 @@
 
 <!-- Off-canvas cart -->
 <div class="offcanvas offcanvas-start" tabindex="-1" id="cart-offcanvas">
-    <div class="offcanvas-header">
-        <h5 class="offcanvas-title">Shopping Cart</h5>
+    <div class="offcanvas-header bg-primary text-white">
+        <h5 class="offcanvas-title">Your Shopping Cart</h5>
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
         <!-- Cart items and content go here -->
         <ul id="cart-items" class="list-group">
-            <!-- Cart items will be dynamically added here -->
+            <!-- Sample cart items -->
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <div class="d-flex flex-column">
+                    <h6 class="mb-0">Aegis L200</h6>
+                    <small>Price: $FREE</small>
+                </div>
+                <span class="badge bg-primary rounded-pill">2</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <div class="d-flex flex-column">
+                    <h6 class="mb-0">COTTON</h6>
+                    <small>Price: $FREE</small>
+                </div>
+                <span class="badge bg-primary rounded-pill">1</span>
+            </li>
+            <!-- Add dynamically added cart items here -->
         </ul>
+        
+        <!-- Cart total -->
+        <div class="mt-3">
+            <h6 class="fw-bold">Total: $00.00</h6>
+        </div>
+        
+        <!-- Action buttons -->
+        <div class="mt-3">
+            <button type="button" class="btn btn-primary btn-lg btn-block">Checkout</button>
+            <button type="button" class="btn btn-secondary btn-lg btn-block" data-bs-dismiss="offcanvas">Continue Shopping</button>
+        </div>
     </div>
 </div>
+
+
 
 <!--carousel-->
 <section class="home py-5 bg-secondary bg-light text-center d-flex align-items-center" id="home">
     <div class="container-lg">
         <div class="row justify-content-center">
-            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1800">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="vape/C1.jpg" class="d-block w-100 section-image" alt="...">
@@ -206,17 +234,16 @@
 
 <!-- Login and Sign-Up Modal -->
 <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header bg-primary text-white">
                 <h5 class="modal-title" id="loginModalLabel">Login or Sign Up</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <!-- login and sign-up forms  -->
+                <!-- Login and Sign-Up Forms -->
                 <!-- Login Form -->
                 <form id="loginForm">
-                    <!--  login form fields go here -->
                     <div class="mb-3">
                         <label for="loginEmail" class="form-label">Email address</label>
                         <input type="email" class="form-control" id="loginEmail" required>
@@ -225,13 +252,12 @@
                         <label for="loginPassword" class="form-label">Password</label>
                         <input type="password" class="form-control" id="loginPassword" required>
                     </div>
-                    <button type="submit" class="btn btn-primary">Login</button>
+                    <button type="submit" class="btn btn-primary btn-block">Login</button>
                 </form>
                 <!-- Sign-Up Form -->
                 <form id="signUpForm" style="display: none;">
-                    <!--  sign-up form fields go here -->
                     <div class="mb-3">
-                        <label for="signupUsername" class="form-label">Username</label>
+                        <label for="signupUsername" class="form-label">Full Name</label>
                         <input type="text" class="form-control" id="signupUsername" required>
                     </div>
                     <div class="mb-3">
@@ -242,16 +268,17 @@
                         <label for="signupPassword" class="form-label">Password</label>
                         <input type="password" class="form-control" id="signupPassword" required>
                     </div>
-                    <button type="submit" class="btn btn-success">Sign Up</button>
+                    <button type="submit" class="btn btn-success btn-block">Sign Up</button>
                 </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button id="toggleForms" type="button" class="btn btn-primary">Switch to Sign Up</button>
+                <button id="toggleForms" type="button" class="btn btn-outline-primary">Switch to Sign Up</button>
             </div>
         </div>
     </div>
 </div>
+
 
 <section class="portfolio bg-dark" id="categories">
     <div class="container-lg py-4">
@@ -406,17 +433,24 @@
 
 <!--product details-->
 <div class="modal fade" id="productModal1" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header bg-primary text-white">
                 <h5 class="modal-title" id="productModalLabel">Product Details</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <h4>Aegis 800</h4>
-                <p>Price: $FREE</p>
-                <p>Color Variant: <span style="background-color: #007bff; color: #fff; padding: 5px;">Blue</span></p>
-                <p>Product Description Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="vape/aegis800.jpg" alt="Product Image" class="img-fluid rounded">
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Aegis 800</h4>
+                        <p class="fw-bold">Price: $FREE</p>
+                        <p class="fw-bold">Color Variant: <span class="badge bg-primary">Blue</span></p>
+                        <p>Product Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -426,17 +460,24 @@
     </div>
 </div>
 <div class="modal fade" id="productModal2" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header bg-primary text-white">
                 <h5 class="modal-title" id="productModalLabel">Product Details</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <h4>Aegis Pro 2</h4>
-                <p>Price: $Free</p>
-                <p>Color Variant: <span style="background-color: #007bff; color: #fff; padding: 5px;">Blue</span></p>
-                <p>Product Description Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="vape/aegispro2.jpg" alt="Product Image" class="img-fluid rounded">
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Aegis Pro</h4>
+                        <p class="fw-bold">Price: $FREE</p>
+                        <p class="fw-bold">Color Variant: <span class="badge bg-primary">Blue</span></p>
+                        <p>Product Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -446,17 +487,24 @@
     </div>
 </div>
 <div class="modal fade" id="productModal3" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header bg-primary text-white">
                 <h5 class="modal-title" id="productModalLabel">Product Details</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <h4>Geek L200</h4>
-                <p>Price: $FREE</p>
-                <p>Color Variant: <span style="background-color: #007bff; color: #fff; padding: 5px;">Blue</span></p>
-                <p>Product Description Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="vape/l200.jpg" alt="Product Image" class="img-fluid rounded">
+                    </div>
+                    <div class="col-md-6">
+                        <h4>L200</h4>
+                        <p class="fw-bold">Price: $FREE</p>
+                        <p class="fw-bold">Color Variant: <span class="badge bg-primary">Blue</span></p>
+                        <p>Product Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -466,17 +514,24 @@
     </div>
 </div>
 <div class="modal fade" id="productModal4" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header bg-primary text-white">
                 <h5 class="modal-title" id="productModalLabel">Product Details</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <h4>Geek Vape</h4>
-                <p>Price: $FREE</p>
-                <p>Color Variant: <span style="background-color: #007bff; color: #fff; padding: 5px;">Blue</span></p>
-                <p>Product Description Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="vape/vape1.jpg" alt="Product Image" class="img-fluid rounded">
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Geek Vape</h4>
+                        <p class="fw-bold">Price: $FREE</p>
+                        <p class="fw-bold">Color Variant: <span class="badge bg-primary">Blue</span></p>
+                        <p>Product Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -486,17 +541,24 @@
     </div>
 </div>
 <div class="modal fade" id="productModal5" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header bg-primary text-white">
                 <h5 class="modal-title" id="productModalLabel">Product Details</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <h4>Geek Pod</h4>
-                <p>Price: $FREE</p>
-                <p>Color Variant: <span style="background-color: #007bff; color: #fff; padding: 5px;">Blue</span></p>
-                <p>Product Description Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="vape/GeekPod.jpg" alt="Product Image" class="img-fluid rounded">
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Geek Pod</h4>
+                        <p class="fw-bold">Price: $FREE</p>
+                        <p class="fw-bold">Color Variant: <span class="badge bg-primary">Blue</span></p>
+                        <p>Product Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -506,17 +568,24 @@
     </div>
 </div>
 <div class="modal fade" id="productModal6" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header bg-primary text-white">
                 <h5 class="modal-title" id="productModalLabel">Product Details</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <h4>Geek Bar</h4>
-                <p>Price: $Free</p>
-                <p>Color Variant: <span style="background-color: #007bff; color: #fff; padding: 5px;">Blue</span></p>
-                <p>Product Description Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="vape/geekbar.jpg" alt="Product Image" class="img-fluid rounded">
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Geek Bar</h4>
+                        <p class="fw-bold">Price: $FREE</p>
+                        <p class="fw-bold">Color Variant: <span class="badge bg-primary">Blue</span></p>
+                        <p>Product Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -526,17 +595,24 @@
     </div>
 </div>
 <div class="modal fade" id="productModal7" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header bg-primary text-white">
                 <h5 class="modal-title" id="productModalLabel">Product Details</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <h4>Atomizers</h4>
-                <p>Price: $FREE</p>
-                <p>Color Variant: <span style="background-color: #007bff; color: #fff; padding: 5px;">Blue</span></p>
-                <p>Product Description Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="vape/t1.jpg" alt="Product Image" class="img-fluid rounded">
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Atomizers</h4>
+                        <p class="fw-bold">Price: $FREE</p>
+                        <p class="fw-bold">Color Variant: <span class="badge bg-primary">Blue</span></p>
+                        <p>Product Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -546,17 +622,24 @@
     </div>
 </div>
 <div class="modal fade" id="productModal8" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header bg-primary text-white">
                 <h5 class="modal-title" id="productModalLabel">Product Details</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <h4>Battery</h4>
-                <p>Price: $FREE</p>
-                <p>Color Variant: <span style="background-color: #007bff; color: #fff; padding: 5px;">Blue</span></p>
-                <p>Product Description Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="vape/batt.jpg" alt="Product Image" class="img-fluid rounded">
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Battery</h4>
+                        <p class="fw-bold">Price: $FREE</p>
+                        <p class="fw-bold">Color Variant: <span class="badge bg-primary">Blue</span></p>
+                        <p>Product Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -566,17 +649,24 @@
     </div>
 </div>
 <div class="modal fade" id="productModal9" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header bg-primary text-white">
                 <h5 class="modal-title" id="productModalLabel">Product Details</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <h4>Charger</h4>
-                <p>Price: $Free</p>
-                <p>Color Variant: <span style="background-color: #007bff; color: #fff; padding: 5px;">Blue</span></p>
-                <p>Product Description Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="vape/charger1.jpg" alt="Product Image" class="img-fluid rounded">
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Charger</h4>
+                        <p class="fw-bold">Price: $FREE</p>
+                        <p class="fw-bold">Color Variant: <span class="badge bg-primary">Blue</span></p>
+                        <p>Product Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -586,17 +676,24 @@
     </div>
 </div>
 <div class="modal fade" id="productModal10" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header bg-primary text-white">
                 <h5 class="modal-title" id="productModalLabel">Product Details</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <h4>Coils</h4>
-                <p>Price: $FREE</p>
-                <p>Color Variant: <span style="background-color: #007bff; color: #fff; padding: 5px;">Blue</span></p>
-                <p>Product Description Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="vape/coil1.jpg" alt="Product Image" class="img-fluid rounded">
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Coils</h4>
+                        <p class="fw-bold">Price: $FREE</p>
+                        <p class="fw-bold">Color Variant: <span class="badge bg-primary">Blue</span></p>
+                        <p>Product Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -605,18 +702,26 @@
         </div>
     </div>
 </div>
+
 <div class="modal fade" id="productModal11" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header bg-primary text-white">
                 <h5 class="modal-title" id="productModalLabel">Product Details</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <h4>Cottons</h4>
-                <p>Price: $FREE</p>
-                <p>Color Variant: <span style="background-color: #007bff; color: #fff; padding: 5px;">Blue</span></p>
-                <p>Product Description Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="vape/cotton.jpg" alt="Product Image" class="img-fluid rounded">
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Cottons</h4>
+                        <p class="fw-bold">Price: $FREE</p>
+                        <p class="fw-bold">Color Variant: <span class="badge bg-primary">Blue</span></p>
+                        <p>Product Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -625,18 +730,26 @@
         </div>
     </div>
 </div>
+
 <div class="modal fade" id="productModal12" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header bg-primary text-white">
                 <h5 class="modal-title" id="productModalLabel">Product Details</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <h4>Tools</h4>
-                <p>Price: $FREE</p>
-                <p>Color Variant: <span style="background-color: #007bff; color: #fff; padding: 5px;">Blue</span></p>
-                <p>Product Description Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="vape/tools.jpg" alt="Product Image" class="img-fluid rounded">
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Tools</h4>
+                        <p class="fw-bold">Price: $FREE</p>
+                        <p class="fw-bold">Color Variant: <span class="badge bg-primary">Blue</span></p>
+                        <p>Product Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -645,6 +758,7 @@
         </div>
     </div>
 </div>
+
 
 <!--end of productttt-->
 
@@ -758,24 +872,26 @@
 
 <!-- Age Verification Modal -->
 <div class="modal fade" id="ageVerificationModal" tabindex="-1" aria-labelledby="ageVerificationModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark text-white">
+            <div class="modal-header border-0">
                 <h5 class="modal-title text-danger fw-bolder" id="ageVerificationModalLabel">WARNING!</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-                <p class="text-center fw-bolder">
-                    AGE CERTIFICATION<br> To use the CLOUDSMOKE website you must be aged 21 years or over.
+            <div class="modal-body text-center">
+                <p class="fw-bolder">
+                    AGE CERTIFICATION<br> To access the CLOUDSMOKE website<br>You must be 21 years or older.
                     Please verify your age before entering the site.
                 </p>
             </div>
-            <div class="modal-footer justify-content-center">
+            <div class="modal-footer justify-content-center border-0">
                 <button type="button" class="btn btn-secondary fw-bolder" data-bs-dismiss="modal">UNDER 21</button>
                 <button type="button" class="btn btn-danger fw-bolder" id="confirmAge">21+</button>
             </div>
         </div>
     </div>
 </div>
+
 
 <!-- Chat support button -->
 <button id="chat-button" class="btn btn-primary"><i class="fas fa-headset"></i></button>
@@ -784,9 +900,9 @@
 <div class="modal fade" id="chat-modal" tabindex="-1" aria-labelledby="chat-modal-label" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="chat-modal-label">CloudSmoke</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="chat-modal-label">CloudSmoke Chat</h5>
+                <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <!-- Chat messages will be displayed here -->
@@ -800,6 +916,7 @@
         </div>
     </div>
 </div>
+
 
 </footer>
 <script src="js/main.js"></script>
